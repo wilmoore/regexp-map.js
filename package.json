@@ -1,0 +1,57 @@
+{
+  "name": "regexp-map",
+  "description": "Curried function which takes a map of `RegExp` string keys which when successfully matched given string, resolves to mapped value.",
+  "version": "0.0.0",
+  "author": "Wil Moore III <wil.moore@wilmoore.com>",
+  "bugs": {
+    "url": "https://github.com/wilmoore/regexp-map.js/issues"
+  },
+  "dependencies": {
+    "curry2": "^1.0.3"
+  },
+  "devDependencies": {
+    "dependency-check": "^2.4.0",
+    "fixpack": "^2.3.0",
+    "istanbul": "^0.4.2",
+    "nodemon": "^1.9.1",
+    "standard": "^6.0.7",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.0.0",
+    "tape-catch": "^1.0.4"
+  },
+  "homepage": "https://github.com/wilmoore/regexp-map.js",
+  "keywords": [
+    "RegExp",
+    "curried",
+    "function",
+    "functional",
+    "hash",
+    "higher-order",
+    "map",
+    "regexp",
+    "regexp-map",
+    "regular expression",
+    "regular-expression",
+    "regularexpression",
+    "string"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "preferGlobal": false,
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wilmoore/regexp-map.js"
+  },
+  "scripts": {
+    "cover": "istanbul cover test.js",
+    "dependency-check": "dependency-check ./package.json && dependency-check ./package.json --unused --no-dev",
+    "dev": "nodemon -x 'npm run test --silent' -e 'js json'",
+    "fixpack": "fixpack",
+    "release-major": "npm version major && git push --follow-tags && npm publish",
+    "release-minor": "npm version minor && git push --follow-tags && npm publish",
+    "release-patch": "npm version patch && git push --follow-tags && npm publish",
+    "standard": "standard",
+    "test": "npm run dependency-check && npm run standard --silent && node test.js | tap-spec"
+  }
+}
