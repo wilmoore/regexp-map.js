@@ -5,6 +5,7 @@
  */
 
 var curry2 = require('curry2')
+var string = Object.prototype.toString
 
 /*!
  * exports.
@@ -26,6 +27,8 @@ module.exports = curry2(remap)
  */
 
 function remap (map, str) {
+  str = string.call(str) === '[object String]' ? str : ''
+
   for (var key in map) {
     if (str.match(new RegExp(key, 'i'))) return map[key]
   }
