@@ -1,7 +1,7 @@
 {
   "name": "regexp-map",
   "description": "Curried function which takes a map of `RegExp` string keys which when successfully matched given string, resolves to mapped value.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Wil Moore III <wil.moore@wilmoore.com>",
   "bugs": {
     "url": "https://github.com/wilmoore/regexp-map.js/issues"
