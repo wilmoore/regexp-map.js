@@ -26,12 +26,12 @@ module.exports = curry2(remap)
  * When matched returns corresponding mapped value; otherwise, an empty string.
  */
 
-function remap (map, str) {
+function remap (map, fallback, str) {
   str = string.call(str) === '[object String]' ? str : ''
 
   for (var key in map) {
     if (str.match(new RegExp(key, 'i'))) return map[key]
   }
 
-  return ''
+  return fallback || null
 }
